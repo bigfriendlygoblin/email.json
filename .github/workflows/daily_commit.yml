@@ -14,7 +14,7 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: 24f2001830@ds.study.iitm.ac.in - Commit and push update
+      - name: 24f2001830@ds.study.iitm.ac.in
         run: |
           echo "Last updated on $(date -u)" >> .daily_update.txt
           git config --global user.name "DevSync Bot"
