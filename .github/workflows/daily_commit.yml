@@ -2,19 +2,19 @@ name: Daily Commit Workflow
 
 on:
   schedule:
-    - cron: '7 9 * * *'  # daily at 9:07 UTC
+    - cron: '7 9 * * *'
   workflow_dispatch:
 
 jobs:
   daily-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
 
-      - name: 24f2001830@ds.study.iitm.ac.in – Create and push daily update
+      - name: 24f2001830@ds.study.iitm.ac.in – Commit and push update
         run: |
           echo "Last updated on $(date -u)" >> .daily_update.txt
           git config --global user.name "DevSync Bot"
