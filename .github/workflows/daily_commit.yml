@@ -1,20 +1,20 @@
-name: Daily Commit Workflow by 24f2001830@ds.study.iitm.ac.in
+name: Daily Commit Workflow
 
 on:
   schedule:
-    - cron: '7 9 * * *'  # Runs daily at 9:07 AM UTC
-  workflow_dispatch:  # Allows manual runs too
+    - cron: '7 9 * * *'  # daily at 9:07 UTC
+  workflow_dispatch:
 
 jobs:
-  commit-job:
+  daily-commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout the repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true  # Required to push later
+          persist-credentials: true
 
-      - name: Commit and push update – 24f2001830@ds.study.iitm.ac.in
+      - name: 24f2001830@ds.study.iitm.ac.in – Create and push daily update
         run: |
           echo "Last updated on $(date -u)" >> .daily_update.txt
           git config --global user.name "DevSync Bot"
