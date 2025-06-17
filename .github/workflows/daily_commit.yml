@@ -1,4 +1,4 @@
-name: Daily Commit Workflow
+name: Daily Commit Workflow by 24f2001830@ds.study.iitm.ac.in
 
 on:
   schedule:
